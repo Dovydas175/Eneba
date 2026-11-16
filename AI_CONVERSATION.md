@@ -1,8 +1,6 @@
-# PlayVault Marketplace - AI Development Conversation
+# AI Development Conversation
 
-> Exported from the actual Codex thread on 2026-11-16. This transcript contains the user prompts and the assistant's visible replies in chronological order. Internal reasoning and tool execution payloads/results are not chat messages and are excluded. The user's selected reply to the GitHub sign-in question is recorded as plain text.
-
----
+This transcript was generated from the actual visible user and assistant messages in the Codex thread. It preserves the message text, including progress updates, and omits internal reasoning, tool calls, command output, and other non-conversational records. Structured UI replies are rendered as the answer the user selected.
 
 ## User
 
@@ -222,3 +220,18 @@ There is a way to reduce prompts: if the permissions menu under the composer off
 ## Assistant (commentary)
 
 The real browser journey passed too: the homepage loaded database-backed shelves, typo search found the intended game, the product page showed three offers, and the cart-to-registration-to-simulated-checkout flow ended with the demo key visible in order history. I’m recording that result and moving on to the ZIP and GitHub push.
+
+---
+
+## Assistant (commentary)
+
+I’m continuing on the repo and deliverables now. The GitHub page needs a final signed-in action to publish the files; meanwhile I’ll check the local package and refresh the conversation export so the ZIP and repo upload contain the latest actual chat.
+
+---
+
+## Assistant (commentary)
+
+The existing GitHub session is signed in, so I’m preparing the upload through that tab. I’ll also check the current build and package contents before calling the deliverables finished; any action that requires a fresh approval will be called out plainly.
+
+---
+
