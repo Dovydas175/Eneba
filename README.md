@@ -2,6 +2,8 @@
 
 A compact digital games marketplace inspired by Eneba's visual language. Built with React, TypeScript, PHP 8.3, MySQL 8, and Apache. All payment is simulated. Seeded key strings are deliberately marked as demo inventory and do not redeem on game platforms.
 
+The full visible user-assistant development conversation is recorded in [`AI_CONVERSATION.md`](AI_CONVERSATION.md).
+
 ## Features
 
 - Homepage hero, best sellers, and deals are fetched from MySQL-backed API data blocks.
