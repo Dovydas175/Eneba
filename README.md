@@ -78,7 +78,7 @@ The brief leaves architecture and exact feature scope open. This implementation 
 - MySQL-compatible seed schema import: passed against isolated MariaDB 10.11, creating 12 products, 27 offers, and 270 demo keys.
 - HTTP API integration: passed on 2026-11-16 against isolated PHP 8.5 + MariaDB 10.11. Checked health/home/catalog filters, typo search, product offers, registration, login, simulated checkout, and retrieval of the delivered key in order history.
 - Browser UI flow: passed on 2026-11-16, including fuzzy search, product offer selection, persistent cart, registration, checkout, order history, and key reveal.
-- GitHub repository and public deployment: publication is in progress. The public repository exists; the source push and Render/TiDB configuration still need to complete.
+- Deployment: the Render Blueprint and managed MySQL-compatible database instructions are included above. The deployed service still needs to be created in an authenticated Render workspace and connected to a configured TiDB instance.
 
 ## License and imagery
 
