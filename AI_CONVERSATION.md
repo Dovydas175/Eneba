@@ -808,3 +808,21 @@ That confirms the exact submission checklist: GitHub repo, public app URL, and f
 
 ---
 
+## Assistant (commentary)
+
+I refreshed the ZIP so it includes the React homepage fix and the complete visible conversation history. The fix is already on GitHub; I also added the latest README/transcript update locally, which needs one final push before the repository matches the ZIP. I’m checking whether this session can sync that commit and verify the live root page.
+
+---
+
+## Assistant (commentary)
+
+The live root page now returns the React HTML with HTTP 200, and `/api/health` still returns `{"status":"ok"}`. I’m checking that the deployed homepage and product APIs return seeded data before I give you the final submission set.
+
+---
+
+## Assistant (commentary)
+
+The root page and product routes are working, but the live check found that `/api/home` errors on TiDB while search and product offers respond correctly. I’m fixing the homepage aggregation query for TiDB’s SQL behavior, then I’ll sync it and recheck the public URL.
+
+---
+

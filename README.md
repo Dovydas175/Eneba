@@ -80,7 +80,7 @@ The brief leaves architecture and exact feature scope open. This implementation 
 - MySQL-compatible seed schema import: passed against isolated MariaDB 10.11, creating 12 products, 27 offers, and 270 demo keys.
 - HTTP API integration: passed on 2026-11-16 against isolated PHP 8.5 + MariaDB 10.11. Checked health/home/catalog filters, typo search, product offers, registration, login, simulated checkout, and retrieval of the delivered key in order history.
 - Browser UI flow: passed on 2026-11-16, including fuzzy search, product offer selection, persistent cart, registration, checkout, order history, and key reveal.
-- Deployment: public Render service at https://playvault-internship-app.onrender.com. The live API health endpoint returned `{"status":"ok"}` after connecting TiDB. The root page initially routed to PHP; the Apache index-priority fix was pushed to `main` in commit `1bcf9be`. Verify the latest Render deploy displays the homepage and buyer flow before submission.
+- Deployment: public Render web service at https://playvault-internship-app.onrender.com, connected to TiDB Cloud. The API health endpoint returned `{"status":"ok"}`. The service is configured by the root `render.yaml` Blueprint; verify the homepage and buyer flow after deploying.
 
 ## License and imagery
 
