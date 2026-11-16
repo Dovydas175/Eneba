@@ -1,0 +1,10 @@
+.git/
+.gitignore
+.env
+frontend/node_modules/
+frontend/dist/
+backend/vendor/
+work/
+outputs/
+node_modules/
+*.zip

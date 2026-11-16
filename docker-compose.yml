@@ -1,0 +1,36 @@
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: playvault
+      MYSQL_USER: playvault
+      MYSQL_PASSWORD: playvault_dev
+      MYSQL_ROOT_PASSWORD: root_dev_only
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./backend/database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  app:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: playvault
+      DB_USER: playvault
+      DB_PASSWORD: playvault_dev
+      APP_ORIGIN: http://localhost:8080
+    ports:
+      - "8080:80"
+volumes:
+  mysql-data:

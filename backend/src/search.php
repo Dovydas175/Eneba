@@ -1,0 +1,3 @@
+<?php
+declare(strict_types=1);
+function fuzzyScore(string $query,string $candidate):float{$needle=mb_strtolower(trim($query));$words=preg_split('/[^\pL\pN]+/u',mb_strtolower($candidate),-1,PREG_SPLIT_NO_EMPTY)?:[];$queries=preg_split('/[^\pL\pN]+/u',$needle,-1,PREG_SPLIT_NO_EMPTY)?:[];if(!$queries)return 0.0;$scores=[];foreach($queries as $q){$best=0.0;foreach($words as $word){similar_text($q,$word,$pct);$pct=max($pct,100*(1-levenshtein($q,$word)/max(1,mb_strlen($q),mb_strlen($word))));if(str_starts_with($word,$q))$pct=max($pct,90.0);$best=max($best,$pct);}if($best<65)return 0.0;$scores[]=$best;}return array_sum($scores)/count($scores);}

@@ -1,0 +1,13 @@
+node_modules/
+work/
+outputs/
+frontend/node_modules/
+frontend/dist/
+frontend/.tsbuildinfo
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+Thumbs.db
+Desktop.ini
