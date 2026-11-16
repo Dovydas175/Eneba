@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 $allowed=getenv('APP_ORIGIN')?:'';
+$sessionPath=getenv('SESSION_SAVE_PATH')?:'';if($sessionPath!==''&&is_dir($sessionPath))ini_set('session.save_path',$sessionPath);
 session_set_cookie_params(['httponly'=>true,'secure'=>str_starts_with($allowed,'https://')||(!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!=='off'),'samesite'=>'Lax','path'=>'/']);
 session_start();
 header('Content-Type: application/json; charset=utf-8'); header('X-Content-Type-Options: nosniff'); header('Cache-Control: no-store');

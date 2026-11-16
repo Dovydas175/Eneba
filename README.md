@@ -76,7 +76,8 @@ The brief leaves architecture and exact feature scope open. This implementation 
 - Frontend production build: passed with `npm run build` on 2026-11-16.
 - Backend PHP syntax and fuzzy-search checks: passed with the local XAMPP PHP runtime (`php backend/tests/search_test.php`).
 - MySQL-compatible seed schema import: passed against isolated MariaDB 10.11, creating 12 products, 27 offers, and 270 demo keys.
-- Full HTTP/browser checkout flow: not verified because this environment blocks local server port binding. Use Docker Compose on a machine with Docker to exercise the complete journey.
+- HTTP API integration: passed on 2026-11-16 against isolated PHP 8.5 + MariaDB 10.11. Checked health/home/catalog filters, typo search, product offers, registration, login, simulated checkout, and retrieval of the delivered key in order history.
+- Browser UI flow: passed on 2026-11-16, including fuzzy search, product offer selection, persistent cart, registration, checkout, order history, and key reveal.
 - GitHub repository and public deployment: publication is in progress. The public repository exists; the source push and Render/TiDB configuration still need to complete.
 
 ## License and imagery
